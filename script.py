@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 #import pyautogui,sys
-
+#fellow contributor: Sudutt Harne
+#fellow contributor: Jai Shukla
 
 def nothing(x):
     pass
@@ -12,7 +13,6 @@ point_left = 4
 
 cap = cv2.VideoCapture(0)
 # mouse callback function
-
 
 kernel = np.ones((6,6),np.float32)
 kernel = kernel/kernel.sum()
@@ -58,7 +58,6 @@ def draw_circle(event,x,y,flags,param):
 cv2.setMouseCallback('frame',draw_circle)
 
 while(1):
-
 
     # Take each frame
     _, frame = cap.read()
@@ -132,7 +131,6 @@ while(1):
     cv2.rectangle(img,top_left, bottom_right, 255, 2)
 
     m_coords_raw = ((top_left[0] + bottom_right[0])/2,(top_left[0] + bottom_right[0])/2)
-
 
     #code for handling mouse
     '''if point_left ==0:
